@@ -2428,20 +2428,20 @@ void TrafficManager::DisplayOverallStats( ostream & os ) const {
 #endif
 #ifdef PFP_CYCLE_DEBUG
     for(int i = 0 ; i < POLARFLY_TABLE_ROWS*(1<<Hypercube_port); i++ ){
-        //cout << "##node" << i << " : " << cycle_table[i] <<  endl;
-        cout << cycle_table[i] << endl;
+        cout << "##node" << i << " : " << cycle_table[i] <<  endl;
+        //cout << cycle_table[i] << endl;
     }
 #endif
 #ifdef HCUBE_CYCLE_DEBUG
     for(int i = 0 ; i < (1<<cube_dim); i++ ){
-        //cout << "##node" << i << " : " << cycle_table[i] <<  endl;
-        cout << cycle_table[i] << endl;
+        cout << "##node" << i << " : " << cycle_table[i] <<  endl;
+        //cout << cycle_table[i] << endl;
     }
 #endif
 #ifdef FATTREE_CYCLE_DEBUG
     for(int i = 0 ; i < _nodes; i++ ){
-        //cout << "##node" << i << " : " << cycle_table[i] <<  endl;
-        cout << cycle_table[i] << endl;
+        cout << "##node" << i << " : " << cycle_table[i] <<  endl;
+        //cout << cycle_table[i] << endl;
     }
 #endif
     }

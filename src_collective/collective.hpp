@@ -16,7 +16,7 @@
 
 #define PAIRWISE
 //#define RING
-//#define BYNARYTREE
+//#define BYNARYTREE not supported
 
 #ifdef PAIRWISE
 const int max_step = 20;

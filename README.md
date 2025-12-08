@@ -47,9 +47,6 @@ Use files in src_collective directory.
 
 In the config file, set the packet size and injection rate as follows, ensuring their product equals 1:
 ``` config.txt
-//for injection mode
-
-//for injection mode
 packet_size = 1;//16384; //8192; //4096; //2048; //1024;//512;//256;//128;//64;//32;//16;//8;
 injection_rate = 1.0;//0.00006103515625; //0.0001220703125; //0.000244140625; //0.00048828125;//0.0009765625;//0.001953125;//0.00390625;//0.0078125;//0.015625;//0.03125;//0.0625;//0.125;
 ```
@@ -57,10 +54,11 @@ injection_rate = 1.0;//0.00006103515625; //0.0001220703125; //0.000244140625; //
 ## 3D x F3 PolarFly+ with single-NIC pairwise exchange algorithm 
 Enable the follwing line in collective.hpp.
 ``` collective.hpp
+#define PFP_CYCLE_DEBUG
 #define PAIRWISE
 ```
 Enable the following line in polarfly_tables.hpp and rebuild.
-```polarfly_tables.hpp.
+``` polarfly_tables.hpp
 #define USE_TABLE_13x4
 ```
 
@@ -78,6 +76,7 @@ routing_function = dim_order;
 ## 6D hypercube with 6-NIC pairwise exchange algorithm 
 Enable the follwing line in collective.hpp.
 ``` collective.hpp
+#define PFP_CYCLE_DEBUG
 #define PAIRWISE
 ```
 Enable the following line in polarfly_tables.hpp and rebuild.
@@ -96,9 +95,10 @@ traffic = pairwise;
 routing_function = dim_order;
 ```
 
-## star topology (single-tier 8-port switch) with 1-NIC pairwise exchange algorithm 
+## star topology (single-tier 32-port switch) with 1-NIC pairwise exchange algorithm 
 Enable the follwing line in collective.hpp and rebuild.
 ``` collective.hpp
+#define FATTREE_CYCLE_DEBUG
 #define PAIRWISE
 #define SWITCH 
 ```
@@ -106,7 +106,7 @@ Enable the follwing line in collective.hpp and rebuild.
 Set the config file as follows:
 ``` config.txt
 topology = fattree;
-k = 8; //ary
+k = 32; //ary
 n = 1; //dim
 nic = 1;
 traffic = pairwise;
@@ -116,6 +116,7 @@ routing_function = nca;
 ## 0D x F2 PolarFly+ (PolarFly) with 2-NIC ring algorithm 
 Enable the follwing line in collective.hpp.
 ``` collective.hpp
+#define PFP_CYCLE_DEBUG
 #define RING
 ```
 Enable the following line in polarfly_tables.hpp and rebuild.
@@ -146,6 +147,13 @@ If you enable the following comments in polarfly_tables.hpp as needed, and debug
 //#define PFP_FAULT_DEBUG // network
 //#define PFP_ROUTING_DEBUG // routefunc
 //#define PFP_ROUTER_DEBUG // router
+```
+Fault avoiding routing is also available.
+In the config file, set the following parameter.
+
+``` config.txt
+link_failures = 1;
+fail_seed=time;
 ```
 
 

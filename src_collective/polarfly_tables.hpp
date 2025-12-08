@@ -12,9 +12,9 @@
 
 #define VCNUM 3 //polarfly vc (request:3 , response:3)
 
-#define USE_TABLE_1x1
+//#define USE_TABLE_1x1
 //#define USE_TABLE_7x3
-//#define USE_TABLE_13x4 
+#define USE_TABLE_13x4 
 //#define USE_TABLE_31x6
 //#define USE_TABLE_57x8
 
