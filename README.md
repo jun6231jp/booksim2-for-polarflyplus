@@ -13,6 +13,10 @@ Use files in src directory.
 ## 6D x F7 PolarFly+ with uniform traffic 
 Enable the following line in polarfly_tables.hpp and rebuild.
 ``` polarfly_tables.hpp
+//#define USE_TABLE_1x1
+//#define USE_TABLE_7x3
+//#define USE_TABLE_13x4
+//#define USE_TABLE_31x6
 #define USE_TABLE_57x8
 ```
 
@@ -29,7 +33,11 @@ traffic = uniform;
 ## 0D x F5 PolarFly+ (PolarFly) with uniform traffic
 Enable the following line in polarfly_tables.hpp and rebuild.
 ``` polarfly_tables.hpp
+//#define USE_TABLE_1x1
+//#define USE_TABLE_7x3
+//#define USE_TABLE_13x4
 #define USE_TABLE_31x6
+//#define USE_TABLE_57x8  
 ```
 
 Set the config file as follows:
@@ -56,10 +64,16 @@ Enable the follwing line in collective.hpp.
 ``` collective.hpp
 #define PFP_CYCLE_DEBUG
 #define PAIRWISE
+//#define RING
 ```
+
 Enable the following line in polarfly_tables.hpp and rebuild.
 ``` polarfly_tables.hpp
+//#define USE_TABLE_1x1
+//#define USE_TABLE_7x3
 #define USE_TABLE_13x4
+//#define USE_TABLE_31x6
+//#define USE_TABLE_57x8  
 ```
 
 Set the config file as follows:
@@ -78,10 +92,15 @@ Enable the follwing line in collective.hpp.
 ``` collective.hpp
 #define PFP_CYCLE_DEBUG
 #define PAIRWISE
+//#define RING
 ```
 Enable the following line in polarfly_tables.hpp and rebuild.
 ```polarfly_tables.hpp
 #define USE_TABLE_1x1
+//#define USE_TABLE_7x3
+//#define USE_TABLE_13x4
+//#define USE_TABLE_31x6
+//#define USE_TABLE_57x8
 ```
 
 Set the config file as follows:
@@ -100,8 +119,10 @@ Enable the follwing line in collective.hpp and rebuild.
 ``` collective.hpp
 #define FATTREE_CYCLE_DEBUG
 #define PAIRWISE
+//#define RING
 #define SWITCH 
 ```
+The "SWITCH" should only be enabled in this simulation. 
 
 Set the config file as follows:
 ``` config.txt
@@ -117,11 +138,16 @@ routing_function = nca;
 Enable the follwing line in collective.hpp.
 ``` collective.hpp
 #define PFP_CYCLE_DEBUG
+//#define PAIRWISE
 #define RING
 ```
 Enable the following line in polarfly_tables.hpp and rebuild.
 ```polarfly_tables.hpp
+//#define USE_TABLE_1x1
 #define USE_TABLE_7x3
+//#define USE_TABLE_13x4
+//#define USE_TABLE_31x6
+//#define USE_TABLE_57x8
 ```
 
 Set the config file as follows:
