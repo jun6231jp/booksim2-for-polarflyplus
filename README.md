@@ -80,7 +80,7 @@ Enable the follwing line in collective.hpp.
 #define PAIRWISE
 ```
 Enable the following line in polarfly_tables.hpp and rebuild.
-```polarfly_tables.hpp.
+```polarfly_tables.hpp
 #define USE_TABLE_1x1
 ```
 

@@ -51,7 +51,7 @@ sw_allocator = separable_input_first;
 vc_buf_size = 10000000;
 
 // Traffic
-traffic = uniform; //pairwise;//ring;//uniform;
+traffic = pairwise;//ring;//uniform;
 //latency: drains all packet, throughput:no drain?
 sim_type = latency;
 warmup_periods = 0;
