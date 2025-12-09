@@ -3,7 +3,8 @@ BookSim Interconnection Network Simulator
 
 BookSim is a cycle-accurate interconnection network simulator.
 Originally developed for and introduced with the [Principles and Practices of Interconnection Networks](http://cva.stanford.edu/books/ppin/) book, its functionality has since been continuously extended.
-The current major release, BookSim 2.0, supports a wide range of topologies such as mesh, torus and flattened butterfly networks, provides diverse routing algorithms and includes numerous options for customizing the network's router microarchitecture.
+
+This simulator is customized version of BookSim2 (https://github.com/booksim/booksim2) for evaluating a new topology "PolarFly+".
 
 ---
 
@@ -122,7 +123,7 @@ Enable the follwing line in collective.hpp and rebuild.
 //#define RING
 #define SWITCH 
 ```
-The "SWITCH" should only be enabled in this simulation. 
+The "SWITCH" should be enabled only in this simulation. 
 
 Set the config file as follows:
 ``` config.txt
